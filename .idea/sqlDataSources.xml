@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="33dfeb25-6faf-4c3c-a450-5f645771cda2" name="@lanka_epassport_system Mapping">
+      <data-sources db="ef92f1aa-b447-45a0-ae0d-dac0f9640815" />
+      <scope>
+        <node kind="database" qname="@">
+          <node kind="schema" negative="1" />
+        </node>
+      </scope>
+    </mapping>
+  </component>
+</project>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>Passport Issuing System</display-name>
+    
+    <!-- Welcome file list -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- Error pages -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error-404.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error-500.jsp</location>
+    </error-page>
+
+    <!-- Servlet Mappings -->
+    <servlet>
+        <servlet-name>ApplicationsServlet</servlet-name>
+        <servlet-class>com.example.passport_issuing.controller.ApplicationsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApplicationsServlet</servlet-name>
+        <url-pattern>/api/applications</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.example.passport_issuing.controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/api/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.example.passport_issuing.controller.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/api/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>StaffLoginServlet</servlet-name>
+        <servlet-class>com.example.passport_issuing.controller.StaffLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StaffLoginServlet</servlet-name>
+        <url-pattern>/api/staff-login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>com.example.passport_issuing.controller.TestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/api/test</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>QuestionController</servlet-name>
+        <servlet-class>com.example.passport_issuing.controller.QuestionController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QuestionController</servlet-name>
+        <url-pattern>/api/questions</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PrintSectionServlet</servlet-name>
+        <servlet-class>com.example.passport_issuing.controller.PrintSectionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PrintSectionServlet</servlet-name>
+        <url-pattern>/api/print-section</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PassportPdfServlet</servlet-name>
+        <servlet-class>com.example.passport_issuing.controller.PassportPdfServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PassportPdfServlet</servlet-name>
+        <url-pattern>/api/passport-pdf</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ApplicationPrintedServlet</servlet-name>
+        <servlet-class>com.example.passport_issuing.controller.ApplicationPrintedServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApplicationPrintedServlet</servlet-name>
+        <url-pattern>/api/application-printed</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PendingDispatchesServlet</servlet-name>
+        <servlet-class>com.example.passport_issuing.controller.PendingDispatchesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PendingDispatchesServlet</servlet-name>
+        <url-pattern>/api/pending-dispatches</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserApplicationServlet</servlet-name>
+        <servlet-class>com.example.passport_issuing.controller.UserApplicationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserApplicationServlet</servlet-name>
+        <url-pattern>/api/user/application</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DatabaseInitServlet</servlet-name>
+        <servlet-class>com.example.passport_issuing.controller.DatabaseInitServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DatabaseInitServlet</servlet-name>
+        <url-pattern>/api/init-db</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestQuestionServlet</servlet-name>
+        <servlet-class>com.example.passport_issuing.controller.TestQuestionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestQuestionServlet</servlet-name>
+        <url-pattern>/api/test-questions</url-pattern>
+    </servlet-mapping>
+
+</web-app>
