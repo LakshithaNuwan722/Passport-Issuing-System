@@ -54,22 +54,45 @@ The **Passport Issuing System** is built to replace manual, time-consuming passp
 ---
 
 ## 📂 Project Structure
-Passport-Issuing-System/
-│
-├── src/
-│ ├── main/
-│ │ ├── java/
-│ │ │ └── [Java source files]
-│ │ ├── resources/
-│ │ └── webapp/
-│ │ ├── css/
-│ │ ├── js/
-│ │ └── views/
-│ └── test/
-│ └── [Test files]
-│
-├── pom.xml
-└── README.md
+graph TD
+    A["📦 Passport-Issuing-System"]
+    
+    A --> B["📁 src/"]
+    A --> C["📄 pom.xml"]
+    A --> D["📄 README.md"]
+    A --> E["📄 .gitignore"]
+    
+    B --> B1["📁 main/"]
+    B --> B2["📁 test/"]
+    
+    B1 --> B1a["📁 java/"]
+    B1 --> B1b["📁 resources/"]
+    B1 --> B1c["📁 webapp/"]
+    
+    B1a --> B1a1["📁 com/example/passport_issuing/"]
+    B1a1 --> B1a1a["📁 controller/<br/>30+ Servlets"]
+    B1a1 --> B1a1b["📁 dao/<br/>Database.java"]
+    B1a1 --> B1a1c["📁 model/<br/>User, Application, Staff"]
+    
+    B1b --> B1b1["📄 init.sql"]
+    B1b --> B1b2["📄 setup_questions_table.sql"]
+    
+    B1c --> B1c1["📁 WEB-INF/"]
+    B1c --> B1c2["📁 META-INF/"]
+    B1c --> B1c3["📁 assets/"]
+    B1c --> B1c4["📁 images/"]
+    B1c --> B1c5["📁 includes/"]
+    B1c --> B1c6["📁 api/"]
+    B1c --> B1c7["📄 *.jsp files"]
+    
+    B2 --> B2a["📁 [Test files]"]
+    
+    style A fill:#2E86AB,stroke:#1A5276,stroke-width:3px,color:#fff
+    style B fill:#A23B72,stroke:#7D1F4A,stroke-width:2px,color:#fff
+    style B1 fill:#F18F01,stroke:#C26F00,stroke-width:2px,color:#fff
+    style B1a fill:#C73E1D,stroke:#8B2A14,stroke-width:2px,color:#fff
+    style B1b fill:#6A994E,stroke:#4A6A34,stroke-width:2px,color:#fff
+    style B1c fill:#BC4749,stroke:#8B3437,stroke-width:2px,color:#fff
 
 
 ---
@@ -77,16 +100,19 @@ Passport-Issuing-System/
 ## 🏗️ Architecture
 
 The system follows a **Three-Tier Architecture**:
-┌─────────────────────────────────┐
-│ Presentation Layer │
-│ JSP / HTML / CSS / JavaScript │
-├─────────────────────────────────┤
-│ Business Logic Layer │
-│ Java Services & Controllers │
-├─────────────────────────────────┤
-│ Data Access Layer │
-│ Database Operations & ORM │
-└─────────────────────────────────┘
+graph LR
+    A["🎨 Presentation Layer<br/>JSP / HTML / CSS / JS"] 
+    B["⚙️ Business Logic Layer<br/>Controllers & Services"]
+    C["🗄️ Data Access Layer<br/>DAO & Database"]
+    
+    A -->|HTTP Requests| B
+    B -->|Query/Update| C
+    C -->|ResultSet| B
+    B -->|Response| A
+    
+    style A fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    style B fill:#50C878,stroke:#2D7A52,stroke-width:2px,color:#fff
+    style C fill:#9B59B6,stroke:#6C3A7C,stroke-width:2px,color:#fff
 
 
 ---
