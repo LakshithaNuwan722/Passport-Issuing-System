@@ -2,24 +2,6 @@
 
 A comprehensive Java-based application designed to automate and streamline the process of passport issuance, management, and tracking. This system provides an efficient solution for government agencies, passport offices, and administrative bodies to manage passport applications, verification, and issuance workflows.
 
----
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Technology Stack](#technology-stack)
-- [Project Structure](#project-structure)
-- [Architecture](#architecture)
-- [Database Schema](#database-schema)
-- [Installation](#installation)
-- [Usage](#usage)
-- [User Roles](#user-roles)
-- [Security](#security)
-- [Contributing](#contributing)
-- [License](#license)
-
----
 
 ## 🔍 Overview
 
